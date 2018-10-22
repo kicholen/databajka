@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	{{ partial "meta.html" . }}
+	<title>{{ if .Params.SEO_Title }}{{ .Params.SEO_Title }}{{ else }}{{ .Title }}{{ end }}</title>
+	<link rel="canonical" href="{{ .Permalink }}">
+    {{ partial "head_includes.html" . }}
+</head>
+<body>

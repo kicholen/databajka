@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway
+  branch: master
+  
+media_folder: static/images
+public_folder: images
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - label: Home page
+        name: home
+        file: content/_index.md
+        create: false
+        fields:
+          - {label: title, name: title, widget: string}
+          - {label: seo_title, name: seo_title, widget: string}
+          - {label: seo_summary, name: seo_summary, widget: string}
+          - {label: seo_keywords, name: seo_keywords, widget: string}
+          - {label: professionSpecific, name: professionSpecific, widget: string}
+          - {label: professionSpecific_Placeholder, name: professionSpecific_Placeholder, widget: string}
+          - {label: professionCategory, name: professionCategory, widget: string}
+          - {label: professionCategory_Placeholder, name: professionCategory_Placeholder, widget: string}
+          - label: professionCategories
+            name: professionCategories
+            widget: list
+            fields:
+              - {label: name, name: name, widget: string}
+          - {label: income, name: income, widget: string}
+          - {label: income_Placeholder, name: income_Placeholder, widget: text}
+          - {label: employmentType, name: employmentType, widget: string}
+          - {label: employmentType_Placeholder, name: employmentType_Placeholder, widget: string}
+          - label: employmentTypes
+            name: employmentTypes
+            widget: list
+            fields:
+              - {label: name, name: name, widget: string}
+          - {label: age, name: age, widget: string}
+          - {label: age_Placeholder, name: age_Placeholder, widget: string}
+          - {label: experience, name: experience, widget: string}
+          - {label: additionalInfo, name: additionalInfo, widget: string}
+          - {label: additionalInfo_Placeholder, name: additionalInfo_Placeholder, widget: string}
+          - {label: buttonSend, name: buttonSend, widget: string}
+
+  

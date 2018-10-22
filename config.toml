@@ -1,0 +1,16 @@
+baseURL = "fillUrl"
+languageCode = "en-us"
+title = "Data Bajka"
+theme = "jelo"
+MetaDataFormat = "yaml"
+sectionPagesMenu = "main"
+enableRobotsTXT = true
+canonifyURLs = true
+
+[outputs]
+    home = ["HTML"]
+    page = ["HTML", "JSON"]
+
+[permalinks]
+page = "/:title/"
+about = "/:filename/"
