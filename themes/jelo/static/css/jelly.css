@@ -84,12 +84,22 @@ body {
     box-shadow: none;
 }
 
-.has-error .form-control {
+.error .form-control {
     box-shadow: none;
 }
 
-.has-error .form-control:focus {
+.error .form-control:focus {
     box-shadow: none;
+}
+
+.error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-style: italic;
+  margin-bottom: 1em;
 }
 
 @media (max-width: 991px) {
