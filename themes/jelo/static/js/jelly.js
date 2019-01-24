@@ -11,7 +11,7 @@
       $("#jelly-alert").delay(3000).slideUp(200, function() {
         $(this).alert('close');
       });
-      submitButton.removeClass("disabled");
+      submitButton.classList.remove("disabled");
     };
 
     const formToJSON = elements => [].reduce.call(elements, (data, element) => {
@@ -21,10 +21,9 @@
       return data;
     }, {});
 
-    const onSubmit = event => {
+    const onSubmit = (event, submitButton) => {
       event.preventDefault();
-      var submitButton = $("input[type=submit]", event.target);
-      submitButton.addClass("disabled");
+      submitButton.classList.add("disabled");
 
       $.ajax({
         type: "POST",

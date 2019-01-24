@@ -58,7 +58,7 @@ function Validator(onSubmit) {
     };
 
     document.addEventListener('blur', function (event) {
-      if (!event.target.form.classList.contains('validate')) return;
+      if (event.target.form && !event.target.form.classList.contains('validate')) return;
       var error = hasError(event.target);
       if (error) 
         showError(event.target, error);
@@ -67,7 +67,8 @@ function Validator(onSubmit) {
     }, true);
 
     document.addEventListener('submit', function(event) {
-      if (!event.target.classList.contains('validate')) return;
+      var submitButton = event.target.querySelector('button[type="submit"]');
+      if (!event.target.classList.contains('validate') || submitButton.classList.contains('disabled')) return;
       var fields = event.target.elements;
 
       var error, hasErrors;
@@ -87,6 +88,6 @@ function Validator(onSubmit) {
         return;
       }
 
-      onSubmit(event);
+      onSubmit(event, submitButton);
     }, false);
 };
