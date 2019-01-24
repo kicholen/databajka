@@ -23,7 +23,7 @@
 			<div class="col-12 col-sm-6">
 				<div class="form-group">
 					<label for="income">{{ .Params.income }}</label>
-					<input type="number" class="form-control" id="income" min="1" max="2147483647" placeholder="{{ .Params.income_Placeholder }}" required>
+					<input type="number" class="form-control" id="income" name="Income" min="1" max="2147483647" placeholder="{{ .Params.income_Placeholder }}" required>
 				</div>
 			</div>
 			<div class="col-12 col-sm-6">
@@ -42,7 +42,7 @@
 			<div class="col-12 col-sm-6">
 				<div class="form-group">
 					<label for="age">{{ .Params.age }}</label>
-					<input type="number" class="form-control" id="age" name="Age" min="18" max="100" placeholder="{{ .Params.age_Placeholder }}">
+					<input type="number" class="form-control" id="age" name="Age" min="18" max="100" placeholder="{{ .Params.age_Placeholder }}" required>
 				</div>
 			</div>
 			<div class="col-12 col-sm-6">
