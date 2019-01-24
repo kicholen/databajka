@@ -28,6 +28,7 @@
 
       $.ajax({
         type: "POST",
+        contentType: "application/json",
         url: "https://29fufz2qb0.execute-api.eu-west-1.amazonaws.com/Prod/api/salary",
         data: JSON.stringify(formToJSON(event.target.elements))
       }).then(response => {
