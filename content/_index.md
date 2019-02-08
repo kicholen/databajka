@@ -37,7 +37,7 @@ professionCategories:
   - name: Transport / Spedycja
   - name: Usługi
 income: Ile zarabiasz miesięcznie netto w PLN?
-income_Placeholder: np 2000
+income_Placeholder: np. 2000
 employmentType: Typ zatrudnienia
 employmentType_Placeholder: Wybierz
 employmentTypes:
@@ -48,7 +48,15 @@ employmentTypes:
   - name: Inne
 age: 'Wiek:'
 age_Placeholder: '28'
-experience: 'Lata doświadczenia (np.: 1.5)'
+experience: Lata doświadczenia
+experience_Placeholder: 'np. 1.5'
+employmentPlace: Miejsce zatrudnienia
+employmentPlace_Placeholder: 'np. Warszawa' 
+gender: Płeć
+gender_Placeholder: Wybierz
+genderTypes:
+  - name: Kobieta
+  - name: Mężczyzna
 additionalInfo: Dodatkowe informacje
 additionalInfo_Placeholder: 'Np. premie, technologie z jakim  pracujesz itp'
 buttonSend: Wyślij

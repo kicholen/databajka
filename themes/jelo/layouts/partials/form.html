@@ -53,6 +53,25 @@
 			</div>
 		</div>
 		<div class="row">
+			<div class="col-12 col-sm-6">
+				<div class="form-group">
+					<label for="employmentPlace">{{ .Params.employmentPlace }}</label>
+					<input type="text" class="form-control" id="gender" name="EmploymentPlace" placeholder="{{ .Params.employmentPlace_Placeholder }}" required>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6">
+				<div class="form-group">
+					<label for="gender">{{ .Params.gender }}</label>
+					<select type="text" class="form-control" id="gender" name="Gender" placeholder="{{ .Params.gender_Placeholder }}" required>
+						<option hidden selected disabled value="">{{ .Params.gender_Placeholder }}</option>
+						{{ range  $index, $element := .Params.genderTypes }}
+						<option data="{{ $index }}">{{ $element.name }}</option>
+						{{ end }}
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
 			<div class="col-md-12">
 				<div class="form-group">
 					<label for="additionalInfo">{{ .Params.additionalInfo }}</label>

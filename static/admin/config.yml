@@ -39,6 +39,16 @@ collections:
           - {label: age, name: age, widget: string}
           - {label: age_Placeholder, name: age_Placeholder, widget: string}
           - {label: experience, name: experience, widget: string}
+          - {label: experience_Placeholder, name: experience_Placeholder, widget: string}
+          - {label: employmentPlace, name: employmentPlace, widget: string}
+          - {label: employmentPlace_Placeholder, name: employmentPlace_Placeholder, widget: string}
+          - {label: gender, name: gender, widget: string}
+          - {label: gender_Placeholder, name: gender_Placeholder, widget: string}
+          - label: genderTypes
+            name: genderTypes
+            widget: list
+            fields:
+              - {label: name, name: name, widget: string}
           - {label: additionalInfo, name: additionalInfo, widget: string}
           - {label: additionalInfo_Placeholder, name: additionalInfo_Placeholder, widget: string}
           - {label: buttonSend, name: buttonSend, widget: string}
