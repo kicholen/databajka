@@ -2,12 +2,11 @@
     "use strict"
 
     const showAlert = (submitButton, alertType, infoText) => {
-      var alertBox = '<div id="jelly-alert" class="alert '
+      $('#messages').html('<div id="jelly-alert" class="alert '
         + alertType
         + ' alert-dismissable alert-fixed"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
         + infoText    
-        + '</div>'
-      $('#messages').html(alertBox)
+        + '</div>')
       $("#jelly-alert").delay(3000).slideUp(200, function() {
         $(this).alert('close')
       })
@@ -20,6 +19,13 @@
       }
       return data
     }, {})
+
+    const showPosition = (position) => {
+      $('#latitude').val(position.coords.latitude)
+      $('#longtitude').val(position.coords.longitude)
+    }
+    if (navigator.geolocation)
+      navigator.geolocation.getCurrentPosition(showPosition);
 
     const onSubmit = (event, submitButton) => {
       event.preventDefault()

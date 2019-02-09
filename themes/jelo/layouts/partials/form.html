@@ -56,7 +56,7 @@
 			<div class="col-12 col-sm-6">
 				<div class="form-group">
 					<label for="employmentPlace">{{ .Params.employmentPlace }}</label>
-					<input type="text" class="form-control" id="gender" name="EmploymentPlace" placeholder="{{ .Params.employmentPlace_Placeholder }}" required>
+					<input type="text" class="form-control" id="employmentPlace" name="EmploymentPlace" placeholder="{{ .Params.employmentPlace_Placeholder }}" required>
 				</div>
 			</div>
 			<div class="col-12 col-sm-6">
@@ -78,6 +78,12 @@
 					<input type="text" class="form-control" id="additionalInfo" name="AdditionalInfo" placeholder="{{ .Params.additionalInfo_Placeholder }}">
 				</div>
 			</div>
+		</div>
+		<div class="form-group">
+			<input type="hidden" class="form-control" id="latitude" name="latitude">
+		</div>
+		<div class="form-group">
+			<input type="hidden" class="form-control" id="longtitude" name="longtitude">
 		</div>
 		<div class="row">
 			<div class="col-md-12">

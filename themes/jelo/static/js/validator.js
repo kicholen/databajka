@@ -3,15 +3,15 @@
 function Validator(onSubmit) {
     this.onSubmit = onSubmit
 
-    var forms = document.querySelectorAll('.validate')
-    for (var i = 0; i < forms.length; i++) {
+    const forms = document.querySelectorAll('.validate')
+    for (let i = 0; i < forms.length; i++) {
       forms[i].setAttribute('novalidate', true)
     }
 
-    var hasError = function (field) {
+    const hasError = function (field) {
       if (field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button') return
   
-      var validity = field.validity
+      const validity = field.validity
       if (validity.valid) return
       if (validity.valueMissing) return 'Wypełnij to pole.'
       if (validity.typeMismatch) {
@@ -28,11 +28,11 @@ function Validator(onSubmit) {
       return 'Wartość wprowadzona dla tego pola jest nieprawidłowa.'
     }
 
-    var showError = function (field, error) {
+    const showError = function (field, error) {
       field.classList.add('error')
-      var id = field.id || field.name
+      const id = field.id || field.name
       if (!id) return
-      var message = field.form.querySelector('.error-message#error-for-' + id)
+      let message = field.form.querySelector('.error-message#error-for-' + id)
       if (!message) {
         message = document.createElement('div')
         message.className = 'error-message'
@@ -45,12 +45,12 @@ function Validator(onSubmit) {
       message.style.visibility = 'visible'
     }
 
-    var removeError = function (field) {
+    const removeError = function (field) {
       field.classList.remove('error')
       field.removeAttribute('aria-describedby')
-      var id = field.id || field.name
+      const id = field.id || field.name
       if (!id) return
-      var message = field.form.querySelector('.error-message#error-for-' + id)
+      const message = field.form.querySelector('.error-message#error-for-' + id)
       if (!message) return
       message.innerHTML = ''
       message.style.display = 'none'
@@ -59,7 +59,7 @@ function Validator(onSubmit) {
 
     document.addEventListener('blur', function (event) {
       if (event.target.form && !event.target.form.classList.contains('validate')) return
-      var error = hasError(event.target)
+      const error = hasError(event.target)
       if (error) 
         showError(event.target, error)
       else
@@ -67,12 +67,12 @@ function Validator(onSubmit) {
     }, true)
 
     document.addEventListener('submit', function(event) {
-      var submitButton = event.target.querySelector('button[type="submit"]')
+      const submitButton = event.target.querySelector('button[type="submit"]')
       if (!event.target.classList.contains('validate') || submitButton.classList.contains('disabled')) return
-      var fields = event.target.elements
+      const fields = event.target.elements
 
-      var error, hasErrors
-      for (var i = 0; i < fields.length; i++) {
+      let error, hasErrors
+      for (let i = 0; i < fields.length; i++) {
         error = hasError(fields[i])
         if (error) {
           showError(fields[i], error)
