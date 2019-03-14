@@ -34,7 +34,7 @@
       const settings = {
         type: "POST",
         contentType: "application/json",
-        url: "https://salaryfunction20190303011415.azurewebsites.net/api/salary",
+        url: "https://salaryfunction20190314103453.azurewebsites.net/api/salary",
         data: JSON.stringify(formToJSON(event.target.elements))
       }
 
